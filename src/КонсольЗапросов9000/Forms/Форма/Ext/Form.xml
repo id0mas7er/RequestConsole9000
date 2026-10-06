@@ -17,8 +17,6 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnClose">ПриЗакрытии</Event>
-		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаКоманднаяПанельФормы" id="256">
@@ -335,7 +333,6 @@
 									</SearchControlAddition>
 									<Events>
 										<Event name="OnEditEnd">ПакетЗапросовПриОкончанииРедактирования</Event>
-										<Event name="ValueChoice">ПакетЗапросовВыборЗначения</Event>
 										<Event name="Selection">ПакетЗапросовВыбор</Event>
 										<Event name="BeforeAddRow">ПакетЗапросовПередНачаломДобавления</Event>
 										<Event name="BeforeEditEnd">ПакетЗапросовПередОкончаниемРедактирования</Event>
@@ -878,14 +875,12 @@
 																			<FileDragMode>AsFile</FileDragMode>
 																			<ContextMenu name="ПараметрыЗапросаФормаКонтекстноеМеню" id="126"/>
 																			<ExtendedTooltip name="ПараметрыЗапросаФормаРасширеннаяПодсказка" id="127"/>
-																			<Events>
-																				<Event name="OnChange">ПараметрыЗапросаФормаПриИзменении</Event>
-																			</Events>
 																		</PictureField>
 																		<InputField name="ПараметрыЗапросаЗначение" id="69">
 																			<DataPath>ПараметрыЗапроса.Значение</DataPath>
 																			<EditMode>Directly</EditMode>
 																			<ClearButton>true</ClearButton>
+																			<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
 																			<ContextMenu name="ПараметрыЗапросаЗначениеКонтекстноеМеню" id="70"/>
 																			<ExtendedTooltip name="ПараметрыЗапросаЗначениеРасширеннаяПодсказка" id="71"/>
 																			<Events>
@@ -1233,9 +1228,6 @@
 													<TitleLocation>None</TitleLocation>
 													<ContextMenu name="ТекстАлгоритмКонтекстноеМеню" id="359"/>
 													<ExtendedTooltip name="ТекстАлгоритмРасширеннаяПодсказка" id="360"/>
-													<Events>
-														<Event name="OnChange">ТекстАлгоритмПриИзменении</Event>
-													</Events>
 												</TextDocumentField>
 												<Table name="СтруктураЗаписиРезультата" id="483">
 													<Representation>Tree</Representation>
@@ -1279,12 +1271,9 @@
 														<ExtendedTooltip name="СтруктураЗаписиРезультатаУправлениеПоискомРасширеннаяПодсказка" id="495"/>
 													</SearchControlAddition>
 													<Events>
-														<Event name="DragCheck">СтруктураЗаписиРезультатаПроверкаПеретаскивания</Event>
 														<Event name="Selection">СтруктураЗаписиРезультатаВыбор</Event>
 														<Event name="DragStart">СтруктураЗаписиРезультатаНачалоПеретаскивания</Event>
 														<Event name="BeforeExpand">СтруктураЗаписиРезультатаПередРазворачиванием</Event>
-														<Event name="Drag">СтруктураЗаписиРезультатаПеретаскивание</Event>
-														<Event name="DragEnd">СтруктураЗаписиРезультатаОкончаниеПеретаскивания</Event>
 													</Events>
 													<ChildItems>
 														<InputField name="СтруктураЗаписиРезультатаИмя" id="496">
@@ -1524,9 +1513,6 @@
 											<MaxWidth>4</MaxWidth>
 											<ContextMenu name="ОпцияОграничениеВыводимыхСтрокКонтекстноеМеню" id="246"/>
 											<ExtendedTooltip name="ОпцияОграничениеВыводимыхСтрокРасширеннаяПодсказка" id="247"/>
-											<Events>
-												<Event name="OnChange">ОпцияОграничениеВыводимыхСтрокПриИзменении</Event>
-											</Events>
 										</InputField>
 										<Button name="ОбновитьРезультат" id="293">
 											<Type>UsualButton</Type>
